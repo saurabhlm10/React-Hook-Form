@@ -28,7 +28,8 @@ const Form = () => {
       message: "Passwords Do Not Match",
       path: ["confirmPassword"],
     })
-    .refine((data) => data.firstName === data.lastName, {
+    .refine(
+      (data) => data.firstName === data.lastName, {
       message: "Names Do Not Match",
       path: ["firstName"],
     })
